@@ -52,19 +52,19 @@ for dept in {1..5}; do for team in A B C; do mkdir -p "Dept${dept}/Team${team}" 
 
 ### Create subdirectories using brace expansion
 
-`mkdir -p project/src/{module1,module2}/{include,lib}`\
+`mkdir -p project/src/{module1,module2}/{include,lib}`
 
-`mkdir -p project/docs/{api,manual}`\
+`mkdir -p project/docs/{api,manual}`
 
 `mkdir -p project/bin`
 
 ### Create empty files
 
-`touch project/src/module1/include/module1.h`\
+`touch project/src/module1/include/module1.h`
 
-`touch project/src/module1/lib/module1.so`\
+`touch project/src/module1/lib/module1.so`
 
-`touch project/src/module2/include/module2.h`\
+`touch project/src/module2/include/module2.h`
 
 `touch project/src/module2/lib/module2.so`
 
@@ -106,14 +106,15 @@ You are given two text files, `file1.txt` and `file2.txt` in the `/opt/assets/` 
 
 ## Solution
 
-use the following script.sh
+
 ```sh script.sh
 #!/usr/bin/bash
 
 diff -u /opt/assets/file1.txt /opt/assets/file2.txt
 comm -12 /opt/assets/file1.txt /opt/assets/file2.txt
+
+chmod 777 script.sh
 ```
-then use the command `chmod 777 script.sh` it will make `script.sh` executable
 
 ## Question No 4
 
@@ -135,7 +136,6 @@ What is DNS and Why Perform a DNS Lookup?: The Domain Name System (DNS) translat
 
 ## Solution
 
-use the following script.sh
 
 ```sh , script.sh
 #!/usr/bin/bash
@@ -145,5 +145,6 @@ echo "www.yahoo.com No"
 echo "www.duckduckgo.com Yes"
 echo "www.youtube.com No"
 echo "www.aws.amazon.com No"
+
+chmod 777 script.sh
 ```
-then use the command `chmod 777 script.sh` it will make `script.sh` executable
